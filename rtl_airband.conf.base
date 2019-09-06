@@ -1,0 +1,28 @@
+
+devices:
+({
+  index = 1;
+  gain = 42;
+  correction = 0;
+  mode = "scan";
+  channels:
+  (
+    {
+      freqs = ( 118000000 );
+        outputs: (
+        {
+	  type = "icecast";
+	  server = "airnavsystems.com";
+          port = 8000;
+          mountpoint = "PGANRB01";
+          genre = "ATC";
+          username = "source";
+          name = "RadaBox24.com Live ATC";
+          password = "hackme";
+	  send_scan_freq_tags = false;
+        }
+      );
+    }
+  );
+ }
+);

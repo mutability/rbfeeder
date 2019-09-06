@@ -1,0 +1,50 @@
+[client]
+network_mode                   = false
+key                            = e95ae
+start_count                    = 0
+dump_dc_filter                 = true
+dump_fix                       = true
+
+[network]
+mode                           = beast
+external_port                  = 30005
+external_host                  = 127.0.0.1
+
+[mlat]
+mlat_cmd                       = /usr/bin/python3.3 /usr/bin/mlat-client
+server                         = mlat1.rb24.com:40900
+pid                            = /run/mlat-client.pid
+autostart_mlat                 = true
+
+[vhf]
+pid                            = /var/run/rtl_airband.pid
+vhf_cmd                        = /radarbox/client/rtl_airband
+autostart_vhf                  = false
+icecast_host                   = airnavsystems.com
+freqs                          = 118000000
+
+[acars]
+pid                            = /var/run/acarsdec.pid
+acars_cmd                      = /radarbox/client/acarsdec
+freqs                          = 131.525 131.550 131.725 131.825
+# USA & Canada
+#freqs                          = 130.025 130.425 130.450 131.550
+# Japan & ASIA
+#freqs                          = 131.450 131.550 131.725
+autostart_acars                = false
+
+[local_network]
+mode=dhcp
+dns1=8.8.8.8
+dns2=8.8.4.4
+
+[permissions]
+dump_gain=false
+dump_agc=false
+dump_fix=false
+dump_dcfilter=false
+dump_checkcrc=false
+rec_lat=true
+rec_lon=true
+rec_alt=true
+
